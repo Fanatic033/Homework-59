@@ -1,4 +1,5 @@
 import React from 'react';
+import JokeBtn from './jokeBtn.tsx';
 
 interface Props {
   joke: string;
@@ -6,10 +7,11 @@ interface Props {
 }
 
 const JokeItem: React.FC<Props> = ({joke, onPress}) => {
+  console.log('rend');
   return (
     <>
       <div className={'mb-3'}>
-        <button type={'button'} onClick={onPress} className={'btn btn-dark'}>New Joke</button>
+        <JokeBtn onPress={onPress}/>
       </div>
       <div>
         <strong>{joke}</strong>

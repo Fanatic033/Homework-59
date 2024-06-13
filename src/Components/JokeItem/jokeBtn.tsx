@@ -1,10 +1,16 @@
+import React from 'react';
 
-const JokeBtn = () => {
+interface Props {
+  onPress: () => void;
+}
+
+const JokeBtn: React.FC<Props> = React.memo(({onPress}) => {
+  console.log('render');
   return (
-    <div>
-
-    </div>
+    <>
+      <button type={'button'} onClick={onPress} className={'btn btn-dark'}>New Joke</button>
+    </>
   );
-};
+});
 
 export default JokeBtn;

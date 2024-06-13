@@ -1,4 +1,4 @@
-export interface Movie{
+export interface cinema{
   name: string;
-  id:number
+  id:string
 }
